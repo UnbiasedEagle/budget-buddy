@@ -185,6 +185,7 @@ export const History = ({ userSettings }: HistoryProps) => {
   );
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const CustomTooltip = ({ active, payload, formatter }: any) => {
   if (!active || !payload || payload.length === 0) return null;
 

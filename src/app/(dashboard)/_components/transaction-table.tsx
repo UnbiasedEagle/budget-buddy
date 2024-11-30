@@ -48,6 +48,7 @@ interface Props {
   to: Date;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const emptyData: any[] = [];
 
 type TransactionHistoryRow = GetTransactionHistoryResponseType[0];
@@ -151,6 +152,7 @@ function TransactionTable({ from, to }: Props) {
       ).then((res) => res.json()),
   });
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleExportCSV = (data: any[]) => {
     const csv = generateCsv(csvConfig)(data);
     download(csvConfig)(csv);

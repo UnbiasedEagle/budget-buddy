@@ -2,6 +2,7 @@ import prisma from '@/lib/db';
 import { currentUser } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const GET = async (req: Request) => {
   const user = await currentUser();
 
